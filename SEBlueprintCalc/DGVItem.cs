@@ -17,11 +17,19 @@ namespace SEBlueprintCalc
         public string Name { get; set; }
         public T Count { get; set; }
 
-        public DGVItem(string Name, T Count, string path)
+        public float mass;
+        public float count;
+
+        public float TotalMass { get { return mass * count; } }
+
+        public DGVItem(string Name, T Count, string path, float mass = 0, float count = 0)
         {
             this.Name = Name;
             this.Count = Count;
+
             this.Icon = Convert(path, 100);
+            this.mass = mass;
+            this.count = count;
         }
 
         public static Bitmap Convert(string path, int size)

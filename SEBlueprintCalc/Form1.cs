@@ -13,21 +13,28 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Microsoft.Win32;
 using System.Configuration;
+using SEBlueprintCalc.WeightCalc;
 
 namespace SEBlueprintCalc
 {
     public partial class Form1 : Form
     {
-        public struct ItemData<T>
+        public struct ItemData
         {
             public string IconPath { get; set; }
-            public Dictionary<string, T> Cost { get; set; }
+            public Dictionary<string, float> Cost { get; set; }
 
-            public ItemData(string DDSPath, Dictionary<string, T> Cost)
+            public ItemData(string DDSPath, Dictionary<string, float> Cost)
             {
                 this.IconPath = DDSPath;
-                this.Cost = new Dictionary<string, T>(Cost);
+                this.Cost = new Dictionary<string, float>(Cost);
             }
+        }
+
+        public struct CompInfo
+        {
+            public float cost;
+            public float mass;
         }
 
         public Form1()
@@ -35,7 +42,7 @@ namespace SEBlueprintCalc
             InitializeComponent();
             if (int.TryParse(ConfigurationManager.AppSettings["RowHeight"], out int tempRH)) rowHeight = tempRH;
             if (float.TryParse(ConfigurationManager.AppSettings["FontSize"], out float tempFS)) fontSize = tempFS;
-            UpdateData();
+            //UpdateData();
             dataGridView1.RowTemplate.Height = rowHeight;
             dataGridView2.RowTemplate.Height = rowHeight;
             dataGridView3.RowTemplate.Height = rowHeight;
@@ -44,14 +51,18 @@ namespace SEBlueprintCalc
             dataGridView3.DefaultCellStyle.Font = new Font(FontFamily.GenericSansSerif, fontSize);
             textBox3.Text = rowHeight.ToString();
             textBox2.Text = fontSize.ToString();
+
+            weightCalculator = new WeightCalc.WeightCalc();
         }
 
         public string rootDir = "../"; //Directory.GetCurrentDirectory();
         public int rowHeight = 50;
         public float fontSize = 9.75f;
-        MySortableBindingList<DGVItem<int>> bpBlocks;
-        MySortableBindingList<DGVItem<int>> bpComps;
+        MySortableBindingList<DGVItem<float>> bpBlocks;
+        MySortableBindingList<DGVItem<float>> bpComps;
         MySortableBindingList<DGVItem<float>> bpIngots;
+
+        public WeightCalc.WeightCalc weightCalculator;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -117,9 +128,9 @@ namespace SEBlueprintCalc
             }
         }
 
-        public Dictionary<string, ItemData<int>> readXMLBlockInfo(string file, Dictionary<string, ItemData<int>> blockDict)
+        public Dictionary<string, ItemData> readXMLBlockInfo(string file, Dictionary<string, ItemData> blockDict)
         {
-            Dictionary<string, int> compDict = new Dictionary<string, int>();
+            Dictionary<string, float> compDict = new Dictionary<string, float>();
             int compCount;
             XmlDocument blocks = new XmlDocument();
             blocks.LoadXml(file);
@@ -144,13 +155,13 @@ namespace SEBlueprintCalc
                     else compDict.Add(compName, compCount);
                 }
                 if (blockDict.ContainsKey(blockName)) continue;
-                else blockDict.Add(blockName, new ItemData<int>(IconPath, compDict));
+                else blockDict.Add(blockName, new ItemData(IconPath, compDict));
                 compDict.Clear();
             }
             return blockDict;
         }
 
-        public Dictionary<string, ItemData<float>> readXMLComponentInfo(string file, Dictionary<string, ItemData<float>> compDict)
+        public Dictionary<string, ItemData> readXMLComponentInfo(string file, Dictionary<string, ItemData> compDict)
         {
             Dictionary<string, float> ingotDict = new Dictionary<string, float>();
             float ingotCount;
@@ -178,13 +189,13 @@ namespace SEBlueprintCalc
                     else ingotDict.Add(ingotName, ingotCount);
                 }
                 if (compDict.ContainsKey(compName)) continue;
-                else compDict.Add(compName, new ItemData<float>(IconPath, ingotDict));
+                else compDict.Add(compName, new ItemData(IconPath, ingotDict));
                 ingotDict.Clear();
             }
             return compDict;
         }
 
-        public Dictionary<string, ItemData<float>> readXMLIngotInfo(string file, Dictionary<string, ItemData<float>> ingotDict)
+        public Dictionary<string, ItemData> readXMLIngotInfo(string file, Dictionary<string, ItemData> ingotDict)
         {
             Dictionary<string, float> oreDict = new Dictionary<string, float>();
             float oreCount;
@@ -206,7 +217,7 @@ namespace SEBlueprintCalc
                 if (ingotName == "Stone" && !ingotDict.ContainsKey("Stone"))
                 {
                     oreDict.Add("Stone", 1);
-                    ingotDict.Add(ingotName, new ItemData<float>(IconPath, oreDict));
+                    ingotDict.Add(ingotName, new ItemData(IconPath, oreDict));
                     oreDict.Clear();
                     continue;
                 }
@@ -220,15 +231,15 @@ namespace SEBlueprintCalc
                     else oreDict.Add(oreName, oreCount);
                 }
                 if (ingotDict.ContainsKey(ingotName)) continue;
-                else ingotDict.Add(ingotName, new ItemData<float>(IconPath, oreDict));
+                else ingotDict.Add(ingotName, new ItemData(IconPath, oreDict));
                 oreDict.Clear();
             }
             return ingotDict;
         }
 
-        public MySortableBindingList<DGVItem<int>> readXMLBlueprintBlocks(string file)
+        public MySortableBindingList<DGVItem<float>> readXMLBlueprintBlocks(string file)
         {
-            MySortableBindingList<DGVItem<int>> bpBlocks = new MySortableBindingList<DGVItem<int>>();
+            MySortableBindingList<DGVItem<float>> bpBlocks = new MySortableBindingList<DGVItem<float>>();
             var iconPaths = readBlocksIconsData();
             bool mod = false;
             string name, partialPath = readGameDir() + "\\Content\\";
@@ -252,20 +263,20 @@ namespace SEBlueprintCalc
                     mod = true;
                     continue;
                 }
-                DGVItem<int> foundBlock = bpBlocks.FirstOrDefault(p => p.Name == name);
+                DGVItem<float> foundBlock = bpBlocks.FirstOrDefault(p => p.Name == name);
                 if (foundBlock != null) foundBlock.Count++;
-                else bpBlocks.Add(new DGVItem<int>(name, 1, partialPath + iconPaths[name]));
+                else bpBlocks.Add(new DGVItem<float>(name, 1, partialPath + iconPaths[name]));
             }
             if (mod) MessageBox.Show("Some unrecognized blocks have been ignored");
             return bpBlocks;
         }
 
-        public MySortableBindingList<DGVItem<int>> getComponents(MySortableBindingList<DGVItem<int>> bpBlocks)
+        public MySortableBindingList<DGVItem<float>> getComponents(MySortableBindingList<DGVItem<float>> bpBlocks)
         {
-            Dictionary<string, Dictionary<string, int>> blockDict = readBlocksData();
+            Dictionary<string, Dictionary<string, float>> blockDict = readBlocksData();
             Dictionary<string, string> iconPaths = readCompsIconsData();
             string partialPath = readGameDir() + "\\Content\\";
-            MySortableBindingList<DGVItem<int>> comps = new MySortableBindingList<DGVItem<int>>();
+            MySortableBindingList<DGVItem<float>> comps = new MySortableBindingList<DGVItem<float>>();
 
             foreach (var bpBlock in bpBlocks)
             {
@@ -273,16 +284,16 @@ namespace SEBlueprintCalc
                 {
                     foreach (var comp in blockDict[bpBlock.Name])
                     {
-                        DGVItem<int> foundComp = comps.FirstOrDefault(p => p.Name == comp.Key);
+                        DGVItem<float> foundComp = comps.FirstOrDefault(p => p.Name == comp.Key);
                         if (foundComp != null) foundComp.Count += comp.Value * bpBlock.Count;
-                        else comps.Add(new DGVItem<int>(comp.Key, comp.Value * bpBlock.Count, partialPath + iconPaths[comp.Key]));
+                        else comps.Add(new DGVItem<float>(comp.Key, comp.Value * bpBlock.Count, partialPath + iconPaths[comp.Key]));
                     }
                 }
             }
             return comps;
         }
 
-        public MySortableBindingList<DGVItem<float>> getIngots(MySortableBindingList<DGVItem<int>> bpComps)
+        public MySortableBindingList<DGVItem<float>> getIngots(MySortableBindingList<DGVItem<float>> bpComps)
         {
             Dictionary<string, Dictionary<string, float>> compDict = readCompsData();
             Dictionary<string, string> iconPaths = readIngotsIconsData();
@@ -304,9 +315,9 @@ namespace SEBlueprintCalc
 
         public void UpdateData()
         {
-            Dictionary<string, ItemData<int>> blockDict = new Dictionary<string, ItemData<int>>();
-            Dictionary<string, ItemData<float>> compDict = new Dictionary<string, ItemData<float>>();
-            Dictionary<string, ItemData<float>> ingotDict = new Dictionary<string, ItemData<float>>();
+            Dictionary<string, ItemData> blockDict = new Dictionary<string, ItemData>();
+            Dictionary<string, ItemData> compDict = new Dictionary<string, ItemData>();
+            Dictionary<string, ItemData> ingotDict = new Dictionary<string, ItemData>();
 
             try
             {
@@ -343,14 +354,14 @@ namespace SEBlueprintCalc
             }
         }
 
-        public Dictionary<string, Dictionary<string, int>> readBlocksData()
+        public Dictionary<string, Dictionary<string, float>> readBlocksData()
         {
-            Dictionary<string, Dictionary<string, int>> blockDict = new Dictionary<string, Dictionary<string, int>>();
+            Dictionary<string, Dictionary<string, float>> blockDict = new Dictionary<string, Dictionary<string, float>>();
             JObject blocks = JObject.Parse(File.ReadAllText(rootDir + "../Data/Blocks.json"));
 
             foreach (var block in blocks)
             {
-                blockDict.Add(block.Key, block.Value.ToObject<ItemData<int>>().Cost);
+                blockDict.Add(block.Key, block.Value.ToObject<ItemData>().Cost);
             }
 
             return blockDict;
@@ -363,7 +374,7 @@ namespace SEBlueprintCalc
 
             foreach (var block in blocks)
             {
-                blockIconDict.Add(block.Key, block.Value.ToObject<ItemData<int>>().IconPath);
+                blockIconDict.Add(block.Key, block.Value.ToObject<ItemData>().IconPath);
             }
 
             return blockIconDict;
@@ -376,7 +387,7 @@ namespace SEBlueprintCalc
 
             foreach (var comp in comps)
             {
-                compDict.Add(comp.Key, comp.Value.ToObject<ItemData<float>>().Cost);
+                compDict.Add(comp.Key, comp.Value.ToObject<ItemData>().Cost);
             }
 
             return compDict;
@@ -389,7 +400,7 @@ namespace SEBlueprintCalc
 
             foreach (var comp in comps)
             {
-                compIconDict.Add(comp.Key, comp.Value.ToObject<ItemData<float>>().IconPath);
+                compIconDict.Add(comp.Key, comp.Value.ToObject<ItemData>().IconPath);
             }
 
             return compIconDict;
@@ -402,7 +413,7 @@ namespace SEBlueprintCalc
 
             foreach (var ingot in ingots)
             {
-                ingotIconDict.Add(ingot.Key, ingot.Value.ToObject<ItemData<float>>().IconPath);
+                ingotIconDict.Add(ingot.Key, ingot.Value.ToObject<ItemData>().IconPath);
             }
 
             return ingotIconDict;
@@ -490,8 +501,13 @@ namespace SEBlueprintCalc
             {
                 Isy += "Ingot/" + item.Name + "=" + string.Format("{0:F0}", Math.Ceiling(item.Count)) + "\n";
             }
+            foreach( var item in bpBlocks)
+            {
+                Isy += "Block/" + item.Name + "=" + string.Format("{0:F0}", Math.Ceiling((decimal)item.Count)) + "\n";
+            }
             Clipboard.SetText(Isy);
             button6.Text = "Copied";
+            weightCalculator.DoCalc(Isy);
         }
 
         private void button6_MouseLeave(object sender, EventArgs e)
