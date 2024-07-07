@@ -65,49 +65,49 @@
     "Cost": {
       "SteelPlate": 25
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeBlockArmorSlope": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\light_armor_slope.dds",
     "Cost": {
       "SteelPlate": 13
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeBlockArmorCorner": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\light_armor_corner.dds",
     "Cost": {
       "SteelPlate": 4
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeBlockArmorCornerInv": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\light_armor_inv_corner.dds",
     "Cost": {
       "SteelPlate": 21
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeRoundArmor_Slope": {
     "IconPath": "Textures\\GUI\\Icons\\Fake.dds",
     "Cost": {
       "SteelPlate": 13
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeRoundArmor_Corner": {
     "IconPath": "Textures\\GUI\\Icons\\Fake.dds",
     "Cost": {
       "SteelPlate": 4
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeRoundArmor_CornerInv": {
     "IconPath": "Textures\\GUI\\Icons\\Fake.dds",
     "Cost": {
       "SteelPlate": 21
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeHeavyBlockArmorBlock": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\heavy_armor_cube.dds",
@@ -115,7 +115,7 @@
       "SteelPlate": 150,
       "MetalGrid": 50
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeHeavyBlockArmorSlope": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\heavy_armor_slope.dds",
@@ -123,7 +123,7 @@
       "SteelPlate": 75,
       "MetalGrid": 25
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeHeavyBlockArmorCorner": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\heavy_armor_corner.dds",
@@ -131,7 +131,7 @@
       "SteelPlate": 25,
       "MetalGrid": 10
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeHeavyBlockArmorCornerInv": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\heavy_armor_inv_corner.dds",
@@ -139,35 +139,35 @@
       "SteelPlate": 125,
       "MetalGrid": 50
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallBlockArmorBlock": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\light_armor_cube.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallBlockArmorSlope": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\light_armor_slope.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallBlockArmorCorner": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\light_armor_corner.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallBlockArmorCornerInv": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\light_armor_inv_corner.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallHeavyBlockArmorBlock": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\heavy_armor_cube.dds",
@@ -175,7 +175,7 @@
       "SteelPlate": 5,
       "MetalGrid": 2
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallHeavyBlockArmorSlope": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\heavy_armor_slope.dds",
@@ -183,7 +183,7 @@
       "SteelPlate": 3,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallHeavyBlockArmorCorner": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\heavy_armor_corner.dds",
@@ -191,7 +191,7 @@
       "SteelPlate": 2,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallHeavyBlockArmorCornerInv": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\heavy_armor_inv_corner.dds",
@@ -199,14 +199,14 @@
       "SteelPlate": 4,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeHalfArmorBlock": {
     "IconPath": "Textures/GUI/Icons/Cubes/LightArmorSquareSlab.dds",
     "Cost": {
       "SteelPlate": 12
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeHeavyHalfArmorBlock": {
     "IconPath": "Textures/GUI/Icons/Cubes/HeavyArmorSquareSlab.dds",
@@ -214,14 +214,14 @@
       "SteelPlate": 75,
       "MetalGrid": 25
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeHalfSlopeArmorBlock": {
     "IconPath": "Textures/GUI/Icons/Cubes/LightArmorSlopeSlab.dds",
     "Cost": {
       "SteelPlate": 4
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeHeavyHalfSlopeArmorBlock": {
     "IconPath": "Textures/GUI/Icons/Cubes/HeavyArmorSlopeSlab.dds",
@@ -229,14 +229,14 @@
       "SteelPlate": 19,
       "MetalGrid": 6
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "HalfArmorBlock": {
     "IconPath": "Textures/GUI/Icons/Cubes/LightArmorSquareSlab.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "HeavyHalfArmorBlock": {
     "IconPath": "Textures/GUI/Icons/Cubes/HeavyArmorSquareSlab.dds",
@@ -244,14 +244,14 @@
       "SteelPlate": 3,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "HalfSlopeArmorBlock": {
     "IconPath": "Textures/GUI/Icons/Cubes/LightArmorSlopeSlab.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "HeavyHalfSlopeArmorBlock": {
     "IconPath": "Textures/GUI/Icons/Cubes/HeavyArmorSlopeSlab.dds",
@@ -259,28 +259,28 @@
       "SteelPlate": 2,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeBlockArmorRoundSlope": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\RoundArmorSlope.dds",
     "Cost": {
       "SteelPlate": 13
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeBlockArmorRoundCorner": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\RoundArmorCorner.dds",
     "Cost": {
       "SteelPlate": 4
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeBlockArmorRoundCornerInv": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\RoundArmorInvCorner.dds",
     "Cost": {
       "SteelPlate": 21
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeHeavyBlockArmorRoundSlope": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyRoundArmorSlope.dds",
@@ -288,7 +288,7 @@
       "SteelPlate": 130,
       "MetalGrid": 50
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeHeavyBlockArmorRoundCorner": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyRoundArmorCorner.dds",
@@ -296,7 +296,7 @@
       "SteelPlate": 125,
       "MetalGrid": 40
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeHeavyBlockArmorRoundCornerInv": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyRoundArmorInvCorner.dds",
@@ -304,28 +304,28 @@
       "SteelPlate": 140,
       "MetalGrid": 50
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallBlockArmorRoundSlope": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\RoundArmorSlope.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallBlockArmorRoundCorner": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\RoundArmorCorner.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallBlockArmorRoundCornerInv": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\RoundArmorInvCorner.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallHeavyBlockArmorRoundSlope": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyRoundArmorSlope.dds",
@@ -333,7 +333,7 @@
       "SteelPlate": 4,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallHeavyBlockArmorRoundCorner": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyRoundArmorCorner.dds",
@@ -341,7 +341,7 @@
       "SteelPlate": 4,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallHeavyBlockArmorRoundCornerInv": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyRoundArmorInvCorner.dds",
@@ -349,49 +349,49 @@
       "SteelPlate": 5,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeBlockArmorSlope2Base": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\Slope2x1x1Base.dds",
     "Cost": {
       "SteelPlate": 19
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeBlockArmorSlope2Tip": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\Slope2x1x1Tip.dds",
     "Cost": {
       "SteelPlate": 6
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeBlockArmorCorner2Base": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\Corner2x1x1Base.dds",
     "Cost": {
       "SteelPlate": 10
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeBlockArmorCorner2Tip": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\Corner2x1x1Tip.dds",
     "Cost": {
       "SteelPlate": 3
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeBlockArmorInvCorner2Base": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\InvCorner2x1x1Base.dds",
     "Cost": {
       "SteelPlate": 22
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeBlockArmorInvCorner2Tip": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\InvCorner2x1x1Tip.dds",
     "Cost": {
       "SteelPlate": 16
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeHeavyBlockArmorSlope2Base": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavySlope2x1x1Base.dds",
@@ -399,7 +399,7 @@
       "SteelPlate": 112,
       "MetalGrid": 40
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeHeavyBlockArmorSlope2Tip": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavySlope2x1x1Tip.dds",
@@ -407,7 +407,7 @@
       "SteelPlate": 40,
       "MetalGrid": 12
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeHeavyBlockArmorCorner2Base": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyCorner2x1x1Base.dds",
@@ -415,7 +415,7 @@
       "SteelPlate": 55,
       "MetalGrid": 15
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeHeavyBlockArmorCorner2Tip": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyCorner2x1x1Tip.dds",
@@ -423,7 +423,7 @@
       "SteelPlate": 19,
       "MetalGrid": 6
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeHeavyBlockArmorInvCorner2Base": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyInvCorner2x1x1Base.dds",
@@ -431,7 +431,7 @@
       "SteelPlate": 133,
       "MetalGrid": 45
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeHeavyBlockArmorInvCorner2Tip": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyInvCorner2x1x1Tip.dds",
@@ -439,49 +439,49 @@
       "SteelPlate": 94,
       "MetalGrid": 25
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallBlockArmorSlope2Base": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\Slope2x1x1Base.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallBlockArmorSlope2Tip": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\Slope2x1x1Tip.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallBlockArmorCorner2Base": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\Corner2x1x1Base.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallBlockArmorCorner2Tip": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\Corner2x1x1Tip.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallBlockArmorInvCorner2Base": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\InvCorner2x1x1Base.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallBlockArmorInvCorner2Tip": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\InvCorner2x1x1Tip.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallHeavyBlockArmorSlope2Base": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavySlope2x1x1Base.dds",
@@ -489,7 +489,7 @@
       "SteelPlate": 4,
       "MetalGrid": 2
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallHeavyBlockArmorSlope2Tip": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavySlope2x1x1Tip.dds",
@@ -497,7 +497,7 @@
       "SteelPlate": 2,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallHeavyBlockArmorCorner2Base": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyCorner2x1x1Base.dds",
@@ -505,7 +505,7 @@
       "SteelPlate": 3,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallHeavyBlockArmorCorner2Tip": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyCorner2x1x1Tip.dds",
@@ -513,7 +513,7 @@
       "SteelPlate": 2,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallHeavyBlockArmorInvCorner2Base": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyInvCorner2x1x1Base.dds",
@@ -521,7 +521,7 @@
       "SteelPlate": 5,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallHeavyBlockArmorInvCorner2Tip": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyInvCorner2x1x1Tip.dds",
@@ -529,161 +529,161 @@
       "SteelPlate": 5,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeArmorPanelLight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmorPanel.dds",
     "Cost": {
       "SteelPlate": 5
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeArmorCenterPanelLight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmorCenterPanel.dds",
     "Cost": {
       "SteelPlate": 5
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeArmorSlopedSidePanelLight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmorSlopedSidePanel.dds",
     "Cost": {
       "SteelPlate": 3
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeArmorSlopedPanelLight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmorSlopedPanel.dds",
     "Cost": {
       "SteelPlate": 6
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeArmorHalfPanelLight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmorHalfPanel.dds",
     "Cost": {
       "SteelPlate": 3
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeArmorHalfCenterPanelLight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmorHalfCenterPanel.dds",
     "Cost": {
       "SteelPlate": 3
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeArmorQuarterPanelLight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightQuarterPanel.dds",
     "Cost": {
       "SteelPlate": 2
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeArmor2x1SlopedPanelLight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmor2x1SlopedPanel.dds",
     "Cost": {
       "SteelPlate": 5
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeArmor2x1SlopedPanelTipLight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmor2x1SlopedPanelTip.dds",
     "Cost": {
       "SteelPlate": 5
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeArmor2x1SlopedSideBasePanelLight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmor2x1SlopedSideBasePanel.dds",
     "Cost": {
       "SteelPlate": 5
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeArmor2x1SlopedSideTipPanelLight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmor2x1SlopeSideTipPanel.dds",
     "Cost": {
       "SteelPlate": 3
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeArmor2x1SlopedSideBasePanelLightInv": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmor2x1SlopeSideBasePanelInv.dds",
     "Cost": {
       "SteelPlate": 5
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeArmor2x1SlopedSideTipPanelLightInv": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmor2x1SlopeSideTipPanelInv.dds",
     "Cost": {
       "SteelPlate": 3
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeArmorHalfSlopedPanelLight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmorHalfSlopedPanel.dds",
     "Cost": {
       "SteelPlate": 4
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeArmor2x1HalfSlopedPanelLightRight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmor2x1HalfSlopedPanel.dds",
     "Cost": {
       "SteelPlate": 3
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeArmor2x1HalfSlopedTipPanelLightRight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmor2x1HalfSlopedTipPanel.dds",
     "Cost": {
       "SteelPlate": 3
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeArmor2x1HalfSlopedPanelLightLeft": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmor2x1HalfSlopedPanelInv.dds",
     "Cost": {
       "SteelPlate": 3
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeArmor2x1HalfSlopedTipPanelLightLeft": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmor2x1HalfSlopedTipPanelInv.dds",
     "Cost": {
       "SteelPlate": 3
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeRoundArmorPanelLight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightRoundArmorPanel.dds",
     "Cost": {
       "SteelPlate": 8
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeRoundArmorPanelCornerLight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightRoundArmorPanelCorner.dds",
     "Cost": {
       "SteelPlate": 5
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeRoundArmorPanelFaceLight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightRoundArmorPanelFace.dds",
     "Cost": {
       "SteelPlate": 4
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeRoundArmorPanelInvertedCornerLight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightRoundArmorPanelInvertedCorner.dds",
     "Cost": {
       "SteelPlate": 5
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeArmorPanelHeavy": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyArmorPanel.dds",
@@ -691,7 +691,7 @@
       "SteelPlate": 15,
       "MetalGrid": 5
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeArmorCenterPanelHeavy": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyArmorCenterPanel.dds",
@@ -699,7 +699,7 @@
       "SteelPlate": 15,
       "MetalGrid": 5
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeArmorSlopedSidePanelHeavy": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyArmorSlopedSidePanel.dds",
@@ -707,7 +707,7 @@
       "SteelPlate": 8,
       "MetalGrid": 3
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeArmorSlopedPanelHeavy": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyArmorSlopedPanel.dds",
@@ -715,7 +715,7 @@
       "SteelPlate": 21,
       "MetalGrid": 7
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeArmorHalfPanelHeavy": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyArmorHalfPanel.dds",
@@ -723,7 +723,7 @@
       "SteelPlate": 8,
       "MetalGrid": 3
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeArmorHalfCenterPanelHeavy": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyArmorHalfCenterPanel.dds",
@@ -731,7 +731,7 @@
       "SteelPlate": 8,
       "MetalGrid": 3
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeArmorQuarterPanelHeavy": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyQuarterPanel.dds",
@@ -739,7 +739,7 @@
       "SteelPlate": 5,
       "MetalGrid": 2
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeArmor2x1SlopedPanelHeavy": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyArmor2x1SlopedPanel.dds",
@@ -747,7 +747,7 @@
       "SteelPlate": 18,
       "MetalGrid": 6
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeArmor2x1SlopedPanelTipHeavy": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyArmor2x1SlopedPanelTip.dds",
@@ -755,7 +755,7 @@
       "SteelPlate": 18,
       "MetalGrid": 6
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeArmor2x1SlopedSideBasePanelHeavy": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyArmor2x1SlopedSideBasePanel.dds",
@@ -763,7 +763,7 @@
       "SteelPlate": 12,
       "MetalGrid": 4
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeArmor2x1SlopedSideTipPanelHeavy": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyArmor2x1SlopeSideTipPanel.dds",
@@ -771,7 +771,7 @@
       "SteelPlate": 6,
       "MetalGrid": 2
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeArmor2x1SlopedSideBasePanelHeavyInv": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyArmor2x1SlopeSideBasePanelInv.dds",
@@ -779,7 +779,7 @@
       "SteelPlate": 12,
       "MetalGrid": 4
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeArmor2x1SlopedSideTipPanelHeavyInv": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyArmor2x1SlopeSideTipPanelInv.dds",
@@ -787,7 +787,7 @@
       "SteelPlate": 6,
       "MetalGrid": 2
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeArmorHalfSlopedPanelHeavy": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyArmorHalfSlopedPanel.dds",
@@ -795,7 +795,7 @@
       "SteelPlate": 9,
       "MetalGrid": 3
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeArmor2x1HalfSlopedPanelHeavyRight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyArmor2x1HalfSlopedPanel.dds",
@@ -803,7 +803,7 @@
       "SteelPlate": 9,
       "MetalGrid": 3
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeArmor2x1HalfSlopedTipPanelHeavyRight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyArmor2x1HalfSlopedTipPanel.dds",
@@ -811,7 +811,7 @@
       "SteelPlate": 9,
       "MetalGrid": 3
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeArmor2x1HalfSlopedPanelHeavyLeft": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyArmor2x1HalfSlopedPanelInv.dds",
@@ -819,7 +819,7 @@
       "SteelPlate": 9,
       "MetalGrid": 3
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeArmor2x1HalfSlopedTipPanelHeavyLeft": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyArmor2x1HalfSlopedTipPanelInv.dds",
@@ -827,7 +827,7 @@
       "SteelPlate": 9,
       "MetalGrid": 3
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeRoundArmorPanelHeavy": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyRoundArmorPanel.dds",
@@ -835,7 +835,7 @@
       "SteelPlate": 24,
       "MetalGrid": 8
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeRoundArmorPanelCornerHeavy": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyRoundArmorPanelCorner.dds",
@@ -843,7 +843,7 @@
       "SteelPlate": 15,
       "MetalGrid": 5
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeRoundArmorPanelFaceHeavy": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyRoundArmorPanelFace.dds",
@@ -851,7 +851,7 @@
       "SteelPlate": 12,
       "MetalGrid": 4
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeRoundArmorPanelInvertedCornerHeavy": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyRoundArmorPanelInvertedCorner.dds",
@@ -859,161 +859,161 @@
       "SteelPlate": 15,
       "MetalGrid": 5
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallArmorPanelLight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmorPanel.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallArmorCenterPanelLight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmorCenterPanel.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallArmorSlopedSidePanelLight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmorSlopedSidePanel.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallArmorSlopedPanelLight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmorSlopedPanel.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallArmorHalfPanelLight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmorHalfPanel.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallArmorHalfCenterPanelLight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmorHalfCenterPanel.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallArmorQuarterPanelLight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightQuarterPanel.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallArmor2x1SlopedPanelLight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmor2x1SlopedPanel.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallArmor2x1SlopedPanelTipLight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmor2x1SlopedPanelTip.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallArmor2x1SlopedSideBasePanelLight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmor2x1SlopedSideBasePanel.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallArmor2x1SlopedSideTipPanelLight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmor2x1SlopeSideTipPanel.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallArmor2x1SlopedSideBasePanelLightInv": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmor2x1SlopeSideBasePanelInv.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallArmor2x1SlopedSideTipPanelLightInv": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmor2x1SlopeSideTipPanelInv.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallArmorHalfSlopedPanelLight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmorHalfSlopedPanel.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallArmor2x1HalfSlopedPanelLightRight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmor2x1HalfSlopedPanel.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallArmor2x1HalfSlopedTipPanelLightRight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmor2x1HalfSlopedTipPanel.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallArmor2x1HalfSlopedPanelLightLeft": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmor2x1HalfSlopedPanelInv.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallArmor2x1HalfSlopedTipPanelLightLeft": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmor2x1HalfSlopedTipPanelInv.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallRoundArmorPanelLight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightRoundArmorPanel.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallRoundArmorPanelCornerLight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightRoundArmorPanelCorner.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallRoundArmorPanelFaceLight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightRoundArmorPanelFace.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallRoundArmorPanelInvertedCornerLight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightRoundArmorPanelInvertedCorner.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallArmorPanelHeavy": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyArmorPanel.dds",
@@ -1021,7 +1021,7 @@
       "SteelPlate": 3,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallArmorCenterPanelHeavy": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyArmorCenterPanel.dds",
@@ -1029,7 +1029,7 @@
       "SteelPlate": 3,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallArmorSlopedSidePanelHeavy": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyArmorSlopedSidePanel.dds",
@@ -1037,7 +1037,7 @@
       "SteelPlate": 2,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallArmorSlopedPanelHeavy": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyArmorSlopedPanel.dds",
@@ -1045,7 +1045,7 @@
       "SteelPlate": 3,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallArmorHalfPanelHeavy": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyArmorHalfPanel.dds",
@@ -1053,7 +1053,7 @@
       "SteelPlate": 2,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallArmorHalfCenterPanelHeavy": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyArmorHalfCenterPanel.dds",
@@ -1061,7 +1061,7 @@
       "SteelPlate": 2,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallArmorQuarterPanelHeavy": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyQuarterPanel.dds",
@@ -1069,7 +1069,7 @@
       "SteelPlate": 2,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallArmor2x1SlopedPanelHeavy": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyArmor2x1SlopedPanel.dds",
@@ -1077,7 +1077,7 @@
       "SteelPlate": 3,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallArmor2x1SlopedPanelTipHeavy": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyArmor2x1SlopedPanelTip.dds",
@@ -1085,7 +1085,7 @@
       "SteelPlate": 3,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallArmor2x1SlopedSideBasePanelHeavy": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyArmor2x1SlopedSideBasePanel.dds",
@@ -1093,7 +1093,7 @@
       "SteelPlate": 3,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallArmor2x1SlopedSideTipPanelHeavy": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyArmor2x1SlopeSideTipPanel.dds",
@@ -1101,7 +1101,7 @@
       "SteelPlate": 2,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallArmor2x1SlopedSideBasePanelHeavyInv": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyArmor2x1SlopeSideBasePanelInv.dds",
@@ -1109,7 +1109,7 @@
       "SteelPlate": 3,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallArmor2x1SlopedSideTipPanelHeavyInv": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyArmor2x1SlopeSideTipPanelInv.dds",
@@ -1117,7 +1117,7 @@
       "SteelPlate": 2,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallArmorHalfSlopedPanelHeavy": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyArmorHalfSlopedPanel.dds",
@@ -1125,7 +1125,7 @@
       "SteelPlate": 2,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallArmor2x1HalfSlopedPanelHeavyRight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyArmor2x1HalfSlopedPanel.dds",
@@ -1133,7 +1133,7 @@
       "SteelPlate": 2,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallArmor2x1HalfSlopedTipPanelHeavyRight": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyArmor2x1HalfSlopedTipPanel.dds",
@@ -1141,7 +1141,7 @@
       "SteelPlate": 2,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallArmor2x1HalfSlopedPanelHeavyLeft": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyArmor2x1HalfSlopedPanelInv.dds",
@@ -1149,7 +1149,7 @@
       "SteelPlate": 2,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallArmor2x1HalfSlopedTipPanelHeavyLeft": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyArmor2x1HalfSlopedTipPanelInv.dds",
@@ -1157,7 +1157,7 @@
       "SteelPlate": 2,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallRoundArmorPanelHeavy": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyRoundArmorPanel.dds",
@@ -1165,7 +1165,7 @@
       "SteelPlate": 3,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallRoundArmorPanelCornerHeavy": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyRoundArmorPanelCorner.dds",
@@ -1173,7 +1173,7 @@
       "SteelPlate": 2,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallRoundArmorPanelFaceHeavy": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyRoundArmorPanelFace.dds",
@@ -1181,7 +1181,7 @@
       "SteelPlate": 3,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallRoundArmorPanelInvertedCornerHeavy": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyRoundArmorPanelInvertedCorner.dds",
@@ -1189,21 +1189,21 @@
       "SteelPlate": 3,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeBlockArmorCornerSquare": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\CornerSquare.dds",
     "Cost": {
       "SteelPlate": 7
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallBlockArmorCornerSquare": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\CornerSquare.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeBlockHeavyArmorCornerSquare": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyCornerSquare.dds",
@@ -1211,7 +1211,7 @@
       "SteelPlate": 40,
       "MetalGrid": 15
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallBlockHeavyArmorCornerSquare": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyCornerSquare.dds",
@@ -1219,21 +1219,21 @@
       "SteelPlate": 2,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeBlockArmorCornerSquareInverted": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\CornerSquareInverted.dds",
     "Cost": {
       "SteelPlate": 19
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallBlockArmorCornerSquareInverted": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\CornerSquareInverted.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeBlockHeavyArmorCornerSquareInverted": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyCornerSquareInverted.dds",
@@ -1241,7 +1241,7 @@
       "SteelPlate": 112,
       "MetalGrid": 40
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallBlockHeavyArmorCornerSquareInverted": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyCornerSquareInverted.dds",
@@ -1249,21 +1249,21 @@
       "SteelPlate": 4,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeBlockArmorHalfCorner": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HalfCorner.dds",
     "Cost": {
       "SteelPlate": 6
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallBlockArmorHalfCorner": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HalfCorner.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeBlockHeavyArmorHalfCorner": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyHalfCorner.dds",
@@ -1271,7 +1271,7 @@
       "SteelPlate": 40,
       "MetalGrid": 12
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallBlockHeavyArmorHalfCorner": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyHalfCorner.dds",
@@ -1279,21 +1279,21 @@
       "SteelPlate": 2,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeBlockArmorHalfSlopeCorner": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HalfSlopeCorner.dds",
     "Cost": {
       "SteelPlate": 2
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallBlockArmorHalfSlopeCorner": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HalfSlopeCorner.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeBlockHeavyArmorHalfSlopeCorner": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyHalfSlopeCorner.dds",
@@ -1301,7 +1301,7 @@
       "SteelPlate": 12,
       "MetalGrid": 4
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallBlockHeavyArmorHalfSlopeCorner": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyHalfSlopeCorner.dds",
@@ -1309,21 +1309,21 @@
       "SteelPlate": 2,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeBlockArmorHalfSlopeCornerInverted": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HalfSlopeCornerInverted.dds",
     "Cost": {
       "SteelPlate": 23
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallBlockArmorHalfSlopeCornerInverted": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HalfSlopeCornerInverted.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeBlockHeavyArmorHalfSlopeCornerInverted": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyHalfSlopeCornerInverted.dds",
@@ -1331,7 +1331,7 @@
       "SteelPlate": 139,
       "MetalGrid": 45
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallBlockHeavyArmorHalfSlopeCornerInverted": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyHalfSlopeCornerInverted.dds",
@@ -1339,21 +1339,21 @@
       "SteelPlate": 5,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeBlockArmorHalfSlopedCorner": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HalfSlopedCorner.dds",
     "Cost": {
       "SteelPlate": 11
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallBlockArmorHalfSlopedCorner": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HalfSlopedCorner.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeBlockHeavyArmorHalfSlopedCorner": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyHalfSlopedCorner.dds",
@@ -1361,7 +1361,7 @@
       "SteelPlate": 45,
       "MetalGrid": 5
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallBlockHeavyArmorHalfSlopedCorner": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyHalfSlopedCorner.dds",
@@ -1369,21 +1369,21 @@
       "SteelPlate": 3,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeBlockArmorHalfSlopedCornerBase": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HalfSlopedCornerBase.dds",
     "Cost": {
       "SteelPlate": 11
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallBlockArmorHalfSlopedCornerBase": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HalfSlopedCornerBase.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeBlockHeavyArmorHalfSlopedCornerBase": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyHalfSlopedCornerBase.dds",
@@ -1391,7 +1391,7 @@
       "SteelPlate": 45,
       "MetalGrid": 15
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallBlockHeavyArmorHalfSlopedCornerBase": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyHalfSlopedCornerBase.dds",
@@ -1399,21 +1399,21 @@
       "SteelPlate": 3,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeBlockArmorHalfSlopeInverted": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HalfSlopeInverted.dds",
     "Cost": {
       "SteelPlate": 22
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallBlockArmorHalfSlopeInverted": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HalfSlopeInverted.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeBlockHeavyArmorHalfSlopeInverted": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyHalfSlopeInverted.dds",
@@ -1421,7 +1421,7 @@
       "SteelPlate": 133,
       "MetalGrid": 45
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallBlockHeavyArmorHalfSlopeInverted": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyHalfSlopeInverted.dds",
@@ -1429,21 +1429,21 @@
       "SteelPlate": 5,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeBlockArmorSlopedCorner": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\SlopedCorner.dds",
     "Cost": {
       "SteelPlate": 13
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallBlockArmorSlopedCorner": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\SlopedCorner.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeBlockHeavyArmorSlopedCorner": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavySlopedCorner.dds",
@@ -1451,7 +1451,7 @@
       "SteelPlate": 75,
       "MetalGrid": 25
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallBlockHeavyArmorSlopedCorner": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavySlopedCorner.dds",
@@ -1459,21 +1459,21 @@
       "SteelPlate": 3,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeBlockArmorSlopedCornerBase": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\SlopedCornerBase.dds",
     "Cost": {
       "SteelPlate": 20
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallBlockArmorSlopedCornerBase": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\SlopedCornerBase.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeBlockHeavyArmorSlopedCornerBase": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavySlopedCornerBase.dds",
@@ -1481,7 +1481,7 @@
       "SteelPlate": 127,
       "MetalGrid": 40
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallBlockHeavyArmorSlopedCornerBase": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavySlopedCornerBase.dds",
@@ -1489,21 +1489,21 @@
       "SteelPlate": 5,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeBlockArmorSlopedCornerTip": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\SlopedCornerTip.dds",
     "Cost": {
       "SteelPlate": 5
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallBlockArmorSlopedCornerTip": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\SlopedCornerTip.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeBlockHeavyArmorSlopedCornerTip": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavySlopedCornerTip.dds",
@@ -1511,7 +1511,7 @@
       "SteelPlate": 23,
       "MetalGrid": 6
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallBlockHeavyArmorSlopedCornerTip": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavySlopedCornerTip.dds",
@@ -1519,21 +1519,21 @@
       "SteelPlate": 2,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeBlockArmorRaisedSlopedCorner": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmorRaisedSlopedCorner.dds",
     "Cost": {
       "SteelPlate": 17
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallBlockArmorRaisedSlopedCorner": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmorRaisedSlopedCorner.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeBlockHeavyArmorRaisedSlopedCorner": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyRaisedSlopedCorner.dds",
@@ -1541,7 +1541,7 @@
       "SteelPlate": 100,
       "MetalGrid": 30
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallBlockHeavyArmorRaisedSlopedCorner": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavyRaisedSlopedCorner.dds",
@@ -1549,21 +1549,21 @@
       "SteelPlate": 4,
       "MetalGrid": 2
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeBlockArmorSlopeTransition": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmorSlopeTransition.dds",
     "Cost": {
       "SteelPlate": 10
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallBlockArmorSlopeTransition": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmorSlopeTransition.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeBlockHeavyArmorSlopeTransition": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavySlopeTransition.dds",
@@ -1571,7 +1571,7 @@
       "SteelPlate": 60,
       "MetalGrid": 18
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallBlockHeavyArmorSlopeTransition": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavySlopeTransition.dds",
@@ -1579,21 +1579,21 @@
       "SteelPlate": 3,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeBlockArmorSlopeTransitionBase": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmorSlopeTransitionBase.dds",
     "Cost": {
       "SteelPlate": 16
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallBlockArmorSlopeTransitionBase": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmorSlopeTransitionBase.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeBlockHeavyArmorSlopeTransitionBase": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavySlopeTransitionBase.dds",
@@ -1601,7 +1601,7 @@
       "SteelPlate": 95,
       "MetalGrid": 35
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallBlockHeavyArmorSlopeTransitionBase": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavySlopeTransitionBase.dds",
@@ -1609,21 +1609,21 @@
       "SteelPlate": 4,
       "MetalGrid": 2
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeBlockArmorSlopeTransitionBaseMirrored": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmorSlopeTransitionBaseMirrored.dds",
     "Cost": {
       "SteelPlate": 16
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallBlockArmorSlopeTransitionBaseMirrored": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmorSlopeTransitionBaseMirrored.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeBlockHeavyArmorSlopeTransitionBaseMirrored": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavySlopeTransitionBaseMirrored.dds",
@@ -1631,7 +1631,7 @@
       "SteelPlate": 95,
       "MetalGrid": 35
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallBlockHeavyArmorSlopeTransitionBaseMirrored": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavySlopeTransitionBaseMirrored.dds",
@@ -1639,21 +1639,21 @@
       "SteelPlate": 4,
       "MetalGrid": 2
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeBlockArmorSlopeTransitionMirrored": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmorSlopeTransitionMirrored.dds",
     "Cost": {
       "SteelPlate": 10
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallBlockArmorSlopeTransitionMirrored": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmorSlopeTransitionMirrored.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeBlockHeavyArmorSlopeTransitionMirrored": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavySlopeTransitionMirrored.dds",
@@ -1661,7 +1661,7 @@
       "SteelPlate": 60,
       "MetalGrid": 18
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallBlockHeavyArmorSlopeTransitionMirrored": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavySlopeTransitionMirrored.dds",
@@ -1669,21 +1669,21 @@
       "SteelPlate": 3,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeBlockArmorSlopeTransitionTip": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmorSlopeTransitionTip.dds",
     "Cost": {
       "SteelPlate": 5
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallBlockArmorSlopeTransitionTip": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmorSlopeTransitionTip.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeBlockHeavyArmorSlopeTransitionTip": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavySlopeTransitionTip.dds",
@@ -1691,7 +1691,7 @@
       "SteelPlate": 30,
       "MetalGrid": 9
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallBlockHeavyArmorSlopeTransitionTip": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavySlopeTransitionTip.dds",
@@ -1699,21 +1699,21 @@
       "SteelPlate": 2,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeBlockArmorSlopeTransitionTipMirrored": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmorSlopeTransitionTipMirrored.dds",
     "Cost": {
       "SteelPlate": 5
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallBlockArmorSlopeTransitionTipMirrored": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmorSlopeTransitionTipMirrored.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeBlockHeavyArmorSlopeTransitionTipMirrored": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavySlopeTransitionTipMirrored.dds",
@@ -1721,7 +1721,7 @@
       "SteelPlate": 30,
       "MetalGrid": 9
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallBlockHeavyArmorSlopeTransitionTipMirrored": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavySlopeTransitionTipMirrored.dds",
@@ -1729,21 +1729,21 @@
       "SteelPlate": 2,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeBlockArmorSquareSlopedCornerBase": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmorSquareSlopedCornerBase.dds",
     "Cost": {
       "SteelPlate": 18
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallBlockArmorSquareSlopedCornerBase": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmorSquareSlopedCornerBase.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeBlockHeavyArmorSquareSlopedCornerBase": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavySquareSlopedCornerBase.dds",
@@ -1751,7 +1751,7 @@
       "SteelPlate": 105,
       "MetalGrid": 35
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallBlockHeavyArmorSquareSlopedCornerBase": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavySquareSlopedCornerBase.dds",
@@ -1759,21 +1759,21 @@
       "SteelPlate": 4,
       "MetalGrid": 2
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeBlockArmorSquareSlopedCornerTip": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmorSquareSlopedCornerTip.dds",
     "Cost": {
       "SteelPlate": 6
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallBlockArmorSquareSlopedCornerTip": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmorSquareSlopedCornerTip.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeBlockHeavyArmorSquareSlopedCornerTip": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavySquareSlopedCornerTip.dds",
@@ -1781,7 +1781,7 @@
       "SteelPlate": 30,
       "MetalGrid": 9
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallBlockHeavyArmorSquareSlopedCornerTip": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavySquareSlopedCornerTip.dds",
@@ -1789,21 +1789,21 @@
       "SteelPlate": 2,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "LargeBlockArmorSquareSlopedCornerTipInv": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmorSquareSlopedCornerTipInv.dds",
     "Cost": {
       "SteelPlate": 9
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallBlockArmorSquareSlopedCornerTipInv": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\LightArmorSquareSlopedCornerTipInv.dds",
     "Cost": {
       "SteelPlate": 1
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "LargeBlockHeavyArmorSquareSlopedCornerTipInv": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavySquareSlopedCornerTipInv.dds",
@@ -1811,7 +1811,7 @@
       "SteelPlate": 55,
       "MetalGrid": 18
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallBlockHeavyArmorSquareSlopedCornerTipInv": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\HeavySquareSlopedCornerTipInv.dds",
@@ -1819,7 +1819,7 @@
       "SteelPlate": 3,
       "MetalGrid": 1
     },
-    "Category": "Armor"
+    "Category": "HeavyArmor"
   },
   "SmallProgrammableBlock": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\ProgrammingBlock.dds",
@@ -3565,56 +3565,56 @@
     "Cost": {
       "SteelPlate": 140
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "ArmorCorner": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\ArmorCorner.dds",
     "Cost": {
       "SteelPlate": 120
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "ArmorInvCorner": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\BlastDoorCornerInverted.dds",
     "Cost": {
       "SteelPlate": 135
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "ArmorSide": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\ArmorSide.dds",
     "Cost": {
       "SteelPlate": 130
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallArmorCenter": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\ArmorCenter.dds",
     "Cost": {
       "SteelPlate": 5
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallArmorCorner": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\ArmorCorner.dds",
     "Cost": {
       "SteelPlate": 5
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallArmorInvCorner": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\BlastDoorCornerInverted.dds",
     "Cost": {
       "SteelPlate": 5
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "SmallArmorSide": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\ArmorSide.dds",
     "Cost": {
       "SteelPlate": 5
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "StoreBlock": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\StoreBlock.dds",
@@ -8874,7 +8874,7 @@
       "Construction": 20,
       "MetalGrid": 10
     },
-    "Category": "Armor"
+    "Category": "LightArmor"
   },
   "PassageSciFi": {
     "IconPath": "Textures\\GUI\\Icons\\Cubes\\PassageSciFi.dds",

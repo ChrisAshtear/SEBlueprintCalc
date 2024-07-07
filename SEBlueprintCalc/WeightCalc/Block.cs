@@ -11,6 +11,7 @@ namespace SEBlueprintCalc.WeightCalc
         public string name;
         public List<ComponentCount> compCost;
         public Dictionary<string, float> cost;
+        public string category;
         public float Mass { get { return GetMass(); } }
 
         public float GetMass()

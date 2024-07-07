@@ -18,6 +18,7 @@ namespace SEBlueprintCalc.WeightCalc
         public string rootDir = "../"; //Directory.GetCurrentDirectory();
         public Dictionary<string, Component> componentList = new Dictionary<string, Component>();
         public Dictionary<string, Block> blockList = new Dictionary<string, Block>();
+        public Dictionary<string, List<BlockCount>> blocksByCategory = new Dictionary<string, List<BlockCount>>();
         public void LoadComponents()
         {
             JObject comps = JObject.Parse(File.ReadAllText(rootDir + "../Data/Components.json"));
@@ -41,7 +42,8 @@ namespace SEBlueprintCalc.WeightCalc
 
                 Block b = new Block();
                 b.cost = block.Value.ToObject<ItemData>().Cost;
-                foreach(var item in b.cost)
+                b.category = block.Value.SelectToken("Category").ToObject<string>();
+                foreach (var item in b.cost)
                 {
                     bool found = componentList.TryGetValue(item.Key, out Component c);
                     if (!found)
@@ -70,6 +72,9 @@ namespace SEBlueprintCalc.WeightCalc
         {
             string[] lines = data.Split('\n');
             List<BlockCount> blocks = new List<BlockCount>();
+
+            blocksByCategory.Clear();
+
             foreach (string line in lines)
             {
                 if(!line.Contains("Block/"))
@@ -84,9 +89,25 @@ namespace SEBlueprintCalc.WeightCalc
                 
                 if(foundBlock)
                 {
-                    blocks.Add(new BlockCount { block = block, count = int.Parse(count) });
+                    BlockCount bCount = new BlockCount { block = block, count = int.Parse(count) };
+                    blocks.Add(bCount);
+
+                    if (!blocksByCategory.ContainsKey(block.category))
+                    {
+                        List<BlockCount> blockList = new List<BlockCount>();
+                        blockList.Add(bCount);
+                        blocksByCategory.Add(block.category, blockList);
+                    }
+                    else
+                    {
+                        blocksByCategory[block.category].Add(bCount);
+                    }
                 }
+
+                
             }
+
+            
 
             string output = "";
 
@@ -97,7 +118,21 @@ namespace SEBlueprintCalc.WeightCalc
                 output += $"{block} - {block.Mass.ToString("N0")}\n";
                 totalMass += block.Mass;
             }
-            output += $"Total Mass: {totalMass}\n";
+            output += "\n\n";
+
+            var orderedCats = blocksByCategory.OrderByDescending(x => x.Value.Sum(y=>y.Mass));
+
+            foreach (KeyValuePair<string, List<BlockCount>> bCats in orderedCats)
+            {
+                
+                float catMass = bCats.Value.Sum(x => x.Mass);
+                float percentage = catMass / totalMass;
+                output += $"Category:{bCats.Key} - Blocks:{bCats.Value.Sum(x=>x.count).ToString("N0")} - Mass:{catMass.ToString("N0")}kg ( {(percentage*100).ToString("N1")}% ) \n";
+            }
+
+
+            output += $"\nTotal Mass: {totalMass.ToString("N0")}kg \n";
+
             Clipboard.SetText(output);
         }
 
