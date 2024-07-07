@@ -91,11 +91,13 @@ namespace SEBlueprintCalc.WeightCalc
             string output = "";
 
             blocks = blocks.OrderByDescending(x => x.Mass).ToList();
-
+            float totalMass = 0;
             foreach(BlockCount block in blocks)
             {
-                output += $"{block} - {block.Mass}\n";
+                output += $"{block} - {block.Mass.ToString("N0")}\n";
+                totalMass += block.Mass;
             }
+            output += $"Total Mass: {totalMass}\n";
             Clipboard.SetText(output);
         }
 

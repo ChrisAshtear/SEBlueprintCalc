@@ -22,6 +22,16 @@
     },
     "Mass": 6.0
   },
+  "ShieldComponent": {
+    "IconPath": "Textures\\GUI\\Icons\\component\\metal_grid_component.dds",
+    "Cost": {
+      "Platinum": 0.67,
+      "Gold": 1.67,
+      "Cobalt": 10.0,
+      "Silver": 0.83
+    },
+    "Mass": 5.0
+  },
   "InteriorPlate": {
     "IconPath": "Textures\\GUI\\Icons\\component\\interior_plate_component.dds",
     "Cost": {
