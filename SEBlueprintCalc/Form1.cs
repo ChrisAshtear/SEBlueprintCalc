@@ -25,10 +25,13 @@ namespace SEBlueprintCalc
             public string IconPath { get; set; }
             public Dictionary<string, float> Cost { get; set; }
 
-            public ItemData(string DDSPath, Dictionary<string, float> Cost)
+            public float mass { get; set; }
+
+            public ItemData(string DDSPath, Dictionary<string, float> Cost, float mass=0)
             {
                 this.IconPath = DDSPath;
                 this.Cost = new Dictionary<string, float>(Cost);
+                this.mass = mass;
             }
         }
 
@@ -207,13 +210,16 @@ namespace SEBlueprintCalc
             return blockDict;
         }
 
-        public Dictionary<string, ItemData> readXMLComponentInfo(string file, Dictionary<string, ItemData> compDict)
+        public Dictionary<string, ItemData> readXMLComponentInfo(string file, string fileComponentInfo, Dictionary<string, ItemData> compDict)
         {
             Dictionary<string, float> ingotDict = new Dictionary<string, float>();
             float ingotCount;
 
             XmlDocument comps = new XmlDocument();
             comps.LoadXml(file);
+
+            XmlDocument compsInfo = new XmlDocument();
+            compsInfo.LoadXml(fileComponentInfo); 
 
             var compSections = comps.DocumentElement.SelectNodes("//Blueprint");
 
@@ -238,6 +244,24 @@ namespace SEBlueprintCalc
                 else compDict.Add(compName, new ItemData(IconPath, ingotDict));
                 ingotDict.Clear();
             }
+
+            var compInfoSections = compsInfo.DocumentElement.SelectNodes("//Components");
+
+            foreach (XmlNode section in compSections)
+            {
+                var compName = "";
+                var comp = section.SelectSingleNode(".//Component/Id");
+                if (comp == null || comp.Attributes["TypeId"].Value != "Component") continue;
+                compName = comp.Attributes["SubtypeId"]?.Value ?? "";
+                var mass = section.SelectSingleNode(".//Mass")?.InnerText ?? "";
+                if (compDict.ContainsKey(compName))
+                {
+                    ItemData d = compDict[compName];
+                    d.mass = int.Parse(mass);
+                    compDict[compName] = d;
+                } 
+            }
+
             return compDict;
         }
 
@@ -373,7 +397,8 @@ namespace SEBlueprintCalc
                 {
                     readXMLBlockInfo(File.ReadAllText(file), blockDict);
                 }
-                readXMLComponentInfo(File.ReadAllText(readGameDir() + "\\Content\\Data\\Blueprints.sbc"), compDict);
+                //C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\ - steam space engy blueprints folder.
+                readXMLComponentInfo(File.ReadAllText(readGameDir() + "\\Content\\Data\\Blueprints.sbc"), File.ReadAllText(readGameDir() + "\\Content\\Data\\Components.sbc"), compDict);
                 readXMLIngotInfo(File.ReadAllText(readGameDir() + "\\Content\\Data\\Blueprints.sbc"), ingotDict);
 
                 string output = JsonConvert.SerializeObject(blockDict, Newtonsoft.Json.Formatting.Indented);
