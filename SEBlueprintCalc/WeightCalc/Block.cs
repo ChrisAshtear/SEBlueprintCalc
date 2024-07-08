@@ -43,4 +43,25 @@ namespace SEBlueprintCalc.WeightCalc
         }
 
     }
+
+    public class BlockCategory
+    {
+        public string name;
+        public List<BlockCount> blocks;
+
+        public string category { get { return name; } }
+        public float totalMass { get { return blocks.Sum(x => x.Mass); } }
+        public float blockCount { get { return blocks.Sum(x => x.count); } }
+
+        public float percentage { get { return (totalMass / shipMass) * 100; } }
+
+        private float shipMass;
+        
+        public BlockCategory(string name, float shipMass, List<BlockCount> blocks)
+        {
+            this.name = name;
+            this.shipMass = shipMass;
+            this.blocks = blocks;
+        }
+    }
 }

@@ -35,6 +35,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.button1 = new System.Windows.Forms.Button();
@@ -49,7 +52,7 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.Analysis = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
@@ -61,26 +64,35 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button7 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.button5 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.button6 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dataGridViewShipMass = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
+            this.shipMassLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tabControl1.SuspendLayout();
+            this.Analysis.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewShipMass)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -235,19 +247,20 @@
             this.dataGridView1.Size = new System.Drawing.Size(333, 423);
             this.dataGridView1.TabIndex = 2;
             // 
-            // tabControl1
+            // Analysis
             // 
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(3, 3);
-            this.tabControl1.Name = "tabControl1";
-            this.tableLayoutPanel1.SetRowSpan(this.tabControl1, 3);
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(347, 455);
-            this.tabControl1.TabIndex = 3;
+            this.Analysis.Controls.Add(this.tabPage2);
+            this.Analysis.Controls.Add(this.tabPage1);
+            this.Analysis.Controls.Add(this.tabPage3);
+            this.Analysis.Controls.Add(this.tabPage4);
+            this.Analysis.Controls.Add(this.tabPage5);
+            this.Analysis.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Analysis.Location = new System.Drawing.Point(3, 3);
+            this.Analysis.Name = "Analysis";
+            this.tableLayoutPanel1.SetRowSpan(this.Analysis, 3);
+            this.Analysis.SelectedIndex = 0;
+            this.Analysis.Size = new System.Drawing.Size(347, 455);
+            this.Analysis.TabIndex = 3;
             // 
             // tabPage3
             // 
@@ -412,6 +425,21 @@
             this.textBox2.TabIndex = 4;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.tableLayoutPanel3.SetColumnSpan(this.label4, 3);
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.Location = new System.Drawing.Point(3, 294);
+            this.label4.Name = "label4";
+            this.tableLayoutPanel3.SetRowSpan(this.label4, 2);
+            this.label4.Size = new System.Drawing.Size(327, 84);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "SEBlueprintCalc v3.2 by Guzuu\r\nReport any issues by a discord DM:\r\nDizzy#5556 or " +
+    "186104843478368256";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // button7
             // 
             this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -428,20 +456,39 @@
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // label4
+            // tabPage5
             // 
-            this.label4.AutoSize = true;
-            this.tableLayoutPanel3.SetColumnSpan(this.label4, 3);
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(3, 294);
-            this.label4.Name = "label4";
-            this.tableLayoutPanel3.SetRowSpan(this.label4, 2);
-            this.label4.Size = new System.Drawing.Size(327, 84);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "SEBlueprintCalc v3.2 by Guzuu\r\nReport any issues by a discord DM:\r\nDizzy#5556 or " +
-    "186104843478368256";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tabPage5.Controls.Add(this.shipMassLabel);
+            this.tabPage5.Controls.Add(this.label6);
+            this.tabPage5.Controls.Add(this.dataGridViewShipMass);
+            this.tabPage5.Controls.Add(this.label5);
+            this.tabPage5.Controls.Add(this.chart1);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(339, 429);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Analysis";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // chart1
+            // 
+            this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
+            this.chart1.Location = new System.Drawing.Point(-4, 24);
+            this.chart1.Name = "chart1";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart1.Series.Add(series2);
+            this.chart1.Size = new System.Drawing.Size(343, 281);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
             // 
             // button5
             // 
@@ -481,7 +528,7 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.tabControl1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.Analysis, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -546,6 +593,47 @@
             this.label3.Text = "Export";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(3, 24);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(175, 20);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Ship Mass by Category:";
+            // 
+            // dataGridViewShipMass
+            // 
+            this.dataGridViewShipMass.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewShipMass.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewShipMass.Location = new System.Drawing.Point(0, 273);
+            this.dataGridViewShipMass.Name = "dataGridViewShipMass";
+            this.dataGridViewShipMass.Size = new System.Drawing.Size(339, 156);
+            this.dataGridViewShipMass.TabIndex = 2;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(3, 1);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(94, 20);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Total Mass: ";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // shipMassLabel
+            // 
+            this.shipMassLabel.AutoSize = true;
+            this.shipMassLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shipMassLabel.Location = new System.Drawing.Point(84, 1);
+            this.shipMassLabel.Name = "shipMassLabel";
+            this.shipMassLabel.Size = new System.Drawing.Size(94, 20);
+            this.shipMassLabel.TabIndex = 4;
+            this.shipMassLabel.Text = "Total Mass: ";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -562,15 +650,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tabControl1.ResumeLayout(false);
+            this.Analysis.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewShipMass)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -590,7 +682,7 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl Analysis;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Button button5;
@@ -610,6 +702,12 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView dataGridViewShipMass;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label shipMassLabel;
     }
 }
 

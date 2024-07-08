@@ -14,6 +14,7 @@ using Newtonsoft.Json.Linq;
 using Microsoft.Win32;
 using System.Configuration;
 using SEBlueprintCalc.WeightCalc;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace SEBlueprintCalc
 {
@@ -107,6 +108,51 @@ namespace SEBlueprintCalc
                 dataGridView2.Columns[1].HeaderText = "Block name";
                 dataGridView1.Columns[1].HeaderText = "Component name";
                 dataGridView3.Columns[1].HeaderText = "Ingot name";
+
+
+                //Analysis
+
+                string Isy = "";
+                foreach (var item in bpComps)
+                {
+                    Isy += "Component/" + item.Name + "=" + string.Format("{0:F0}", item.Count) + "\n";
+                }
+                foreach (var item in bpIngots)
+                {
+                    Isy += "Ingot/" + item.Name + "=" + string.Format("{0:F0}", Math.Ceiling(item.Count)) + "\n";
+                }
+                foreach (var item in bpBlocks)
+                {
+                    Isy += "Block/" + item.Name + "=" + string.Format("{0:F0}", Math.Ceiling((decimal)item.Count)) + "\n";
+                }
+
+                weightCalculator.DoCalc(Isy);
+
+                string seriesname = "MySeriesName";
+                chart1.Series.Clear();
+                chart1.Series.Add(seriesname);
+
+                MySortableBindingList<BlockCategory> ListBlocks = new MySortableBindingList<BlockCategory>();
+                //set the chart-type to "Pie"
+
+                chart1.Series[seriesname].ChartType = SeriesChartType.Pie;
+                chart1.Series[seriesname]["PieLabelStyle"] = "Disabled";
+                foreach (KeyValuePair<string, List<BlockCount>> blocks in weightCalculator.blocksByCategory)
+                {
+                    chart1.Series[seriesname].Points.AddXY(blocks.Key, blocks.Value.Sum(x => x.Mass) / weightCalculator.totalMass);
+
+                    BlockCategory cat = new BlockCategory(blocks.Key, weightCalculator.totalMass, blocks.Value);
+                    ListBlocks.Add(cat);
+                }
+
+                dataGridViewShipMass.DataSource = ListBlocks;
+                dataGridViewShipMass.Columns["totalMass"].DefaultCellStyle.Format = "N0";
+                dataGridViewShipMass.Columns["totalMass"].HeaderText = "Total Mass(in kg)";
+                dataGridViewShipMass.Columns["percentage"].DefaultCellStyle.Format = "N2";
+                dataGridViewShipMass.Columns["percentage"].HeaderText = "Percentage(%)";
+
+                shipMassLabel.Text = weightCalculator.totalMass.ToString("N0") + " kg";
+
             }
             catch (Exception ex)
             {
@@ -507,7 +553,7 @@ namespace SEBlueprintCalc
             }
             Clipboard.SetText(Isy);
             button6.Text = "Copied";
-            weightCalculator.DoCalc(Isy);
+
         }
 
         private void button6_MouseLeave(object sender, EventArgs e)
@@ -557,6 +603,11 @@ namespace SEBlueprintCalc
 
             config.Save(ConfigurationSaveMode.Modified);
             ConfigurationManager.RefreshSection("appSettings");
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

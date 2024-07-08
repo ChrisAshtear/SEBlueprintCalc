@@ -19,6 +19,8 @@ namespace SEBlueprintCalc.WeightCalc
         public Dictionary<string, Component> componentList = new Dictionary<string, Component>();
         public Dictionary<string, Block> blockList = new Dictionary<string, Block>();
         public Dictionary<string, List<BlockCount>> blocksByCategory = new Dictionary<string, List<BlockCount>>();
+        public float totalMass = 0;
+
         public void LoadComponents()
         {
             JObject comps = JObject.Parse(File.ReadAllText(rootDir + "../Data/Components.json"));
@@ -107,31 +109,32 @@ namespace SEBlueprintCalc.WeightCalc
                 
             }
 
-            
-
             string output = "";
 
             blocks = blocks.OrderByDescending(x => x.Mass).ToList();
-            float totalMass = 0;
-            foreach(BlockCount block in blocks)
-            {
-                output += $"{block} - {block.Mass.ToString("N0")}\n";
-                totalMass += block.Mass;
-            }
-            output += "\n\n";
-
+            totalMass = blocks.Sum(x => x.Mass);
+            
             var orderedCats = blocksByCategory.OrderByDescending(x => x.Value.Sum(y=>y.Mass));
+
+
+            output += $"Total Mass: {totalMass.ToString("N0")}kg\n";
+            output += $"Total Blocks: {blocks.Sum(x=>x.count)} \n\n";
 
             foreach (KeyValuePair<string, List<BlockCount>> bCats in orderedCats)
             {
-                
+
                 float catMass = bCats.Value.Sum(x => x.Mass);
                 float percentage = catMass / totalMass;
-                output += $"Category:{bCats.Key} - Blocks:{bCats.Value.Sum(x=>x.count).ToString("N0")} - Mass:{catMass.ToString("N0")}kg ( {(percentage*100).ToString("N1")}% ) \n";
+                output += $"Category:{bCats.Key} - Blocks:{bCats.Value.Sum(x => x.count).ToString("N0")} - Mass:{catMass.ToString("N0")}kg ( {(percentage * 100).ToString("N1")}% ) \n";
             }
 
+            output += $"\n Counts by individual block\n";
 
-            output += $"\nTotal Mass: {totalMass.ToString("N0")}kg \n";
+            foreach (BlockCount block in blocks)
+            {
+                output += $"{block} - {block.Mass.ToString("N0")}\n";
+            }
+            output += "\n\n";
 
             Clipboard.SetText(output);
         }
