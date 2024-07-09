@@ -15,9 +15,13 @@ using Microsoft.Win32;
 using System.Configuration;
 using SEBlueprintCalc.WeightCalc;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.Xml.Linq;
+
 
 namespace SEBlueprintCalc
 {
+    using Component = WeightCalc.Component;
+
     public partial class Form1 : Form
     {
         public struct ItemData
@@ -90,6 +94,7 @@ namespace SEBlueprintCalc
                 bpBlocks = readXMLBlueprintBlocks(bpFile);
                 bpComps = getComponents(bpBlocks);
                 bpIngots = getIngots(bpComps);
+                getBlockMass(bpBlocks);
 
                 dataGridView2.DataSource = bpBlocks;
                 dataGridView1.DataSource = bpComps;
@@ -112,7 +117,12 @@ namespace SEBlueprintCalc
                 dataGridView1.Columns[1].HeaderText = "Component name";
                 dataGridView3.Columns[1].HeaderText = "Ingot name";
 
-
+                dataGridView1.Columns["TotalMass"].DefaultCellStyle.Format = "N1";
+                dataGridView2.Columns["TotalMass"].DefaultCellStyle.Format = "N1";
+                dataGridView3.Columns["TotalMass"].DefaultCellStyle.Format = "N1";
+                dataGridView1.Columns["Count"].DefaultCellStyle.Format = "N0";
+                dataGridView2.Columns["Count"].DefaultCellStyle.Format = "N0";
+                dataGridView3.Columns["Count"].DefaultCellStyle.Format = "N2";
                 //Analysis
 
                 string Isy = "";
@@ -247,19 +257,21 @@ namespace SEBlueprintCalc
 
             var compInfoSections = compsInfo.DocumentElement.SelectNodes("//Components");
 
-            foreach (XmlNode section in compSections)
+            XDocument compInfoS = XDocument.Parse(compsInfo.InnerXml);
+            var components = compInfoS.Descendants("Components");
+            foreach (var c in components)
             {
                 var compName = "";
-                var comp = section.SelectSingleNode(".//Component/Id");
-                if (comp == null || comp.Attributes["TypeId"].Value != "Component") continue;
-                compName = comp.Attributes["SubtypeId"]?.Value ?? "";
-                var mass = section.SelectSingleNode(".//Mass")?.InnerText ?? "";
+                var comp = c.Descendants("TypeId").FirstOrDefault().Value;
+                if (comp == null) continue;
+                compName = c.Descendants("SubtypeId").FirstOrDefault().Value;
+                var mass = c.Descendants("Mass").FirstOrDefault().Value;
                 if (compDict.ContainsKey(compName))
                 {
                     ItemData d = compDict[compName];
                     d.mass = int.Parse(mass);
                     compDict[compName] = d;
-                } 
+                }
             }
 
             return compDict;
@@ -341,10 +353,32 @@ namespace SEBlueprintCalc
             return bpBlocks;
         }
 
+        public MySortableBindingList<DGVItem<float>> getBlockMass(MySortableBindingList<DGVItem<float>> bpBlocks)
+        {
+            Dictionary<string, Dictionary<string, float>> blockDict = readBlocksData();
+            Dictionary<string, WeightCalc.Component> compDict = readCompsData();
+
+            foreach (var bpBlock in bpBlocks)
+            {
+                if (blockDict.ContainsKey(bpBlock.Name))
+                {
+                    bpBlock.mass = 0;
+                    foreach (var comp in blockDict[bpBlock.Name])
+                    {
+                        Component c = compDict[comp.Key];
+                        bpBlock.mass += comp.Value * c.mass;
+                        bpBlock.count = bpBlock.Count;
+                    }
+                }
+            }
+            return bpBlocks;
+        }
+
         public MySortableBindingList<DGVItem<float>> getComponents(MySortableBindingList<DGVItem<float>> bpBlocks)
         {
             Dictionary<string, Dictionary<string, float>> blockDict = readBlocksData();
             Dictionary<string, string> iconPaths = readCompsIconsData();
+            Dictionary<string, WeightCalc.Component> compDict = readCompsData();
             string partialPath = readGameDir() + "\\Content\\";
             MySortableBindingList<DGVItem<float>> comps = new MySortableBindingList<DGVItem<float>>();
 
@@ -355,8 +389,16 @@ namespace SEBlueprintCalc
                     foreach (var comp in blockDict[bpBlock.Name])
                     {
                         DGVItem<float> foundComp = comps.FirstOrDefault(p => p.Name == comp.Key);
-                        if (foundComp != null) foundComp.Count += comp.Value * bpBlock.Count;
-                        else comps.Add(new DGVItem<float>(comp.Key, comp.Value * bpBlock.Count, partialPath + iconPaths[comp.Key]));
+                        if (foundComp != null)
+                        {
+                            foundComp.Count += comp.Value * bpBlock.Count;
+                            foundComp.count += comp.Value * bpBlock.Count;
+                        }
+                        else
+                        {
+                            Component c = compDict[comp.Key];
+                            comps.Add(new DGVItem<float>(comp.Key, comp.Value * bpBlock.Count, partialPath + iconPaths[comp.Key], c.mass, comp.Value * bpBlock.Count));
+                        }
                     }
                 }
             }
@@ -365,7 +407,7 @@ namespace SEBlueprintCalc
 
         public MySortableBindingList<DGVItem<float>> getIngots(MySortableBindingList<DGVItem<float>> bpComps)
         {
-            Dictionary<string, Dictionary<string, float>> compDict = readCompsData();
+            Dictionary<string, WeightCalc.Component> compDict = readCompsData();
             Dictionary<string, string> iconPaths = readIngotsIconsData();
             string partialPath = readGameDir() + "\\Content\\";
             MySortableBindingList<DGVItem<float>> ingots = new MySortableBindingList<DGVItem<float>>();
@@ -373,7 +415,7 @@ namespace SEBlueprintCalc
             foreach (var bpComp in bpComps)
             {
                 if (bpComp.Name == "ZoneChip") continue;
-                foreach (var ingot in compDict[bpComp.Name])
+                foreach (var ingot in compDict[bpComp.Name].cost)
                 {
                     DGVItem<float> foundIngot = ingots.FirstOrDefault(p => p.Name == ingot.Key);
                     if (foundIngot != null) foundIngot.Count += ingot.Value * bpComp.Count;
@@ -451,15 +493,25 @@ namespace SEBlueprintCalc
             return blockIconDict;
         }
 
-        public Dictionary<string, Dictionary<string, float>> readCompsData()
+        public Dictionary<string, WeightCalc.Component> readCompsData()
         {
-            Dictionary<string, Dictionary<string, float>> compDict = new Dictionary<string, Dictionary<string, float>>();
+            /*Dictionary<string, Dictionary<string, float>> compDict = new Dictionary<string, Dictionary<string, float>>();
             JObject comps = JObject.Parse(File.ReadAllText(rootDir + "../Data/Components.json"));
 
             foreach (var comp in comps)
             {
                 compDict.Add(comp.Key, comp.Value.ToObject<ItemData>().Cost);
+            }*/
+
+            Dictionary<string, WeightCalc.Component> compDict = new Dictionary<string, WeightCalc.Component>();
+            JObject comps = JObject.Parse(File.ReadAllText(rootDir + "../Data/Components.json"));
+
+            foreach (var comp in comps)
+            {
+                WeightCalc.Component c = new WeightCalc.Component { cost = comp.Value.ToObject<WeightCalc.Component>().cost, mass = comp.Value.ToObject<WeightCalc.Component>().mass, name = comp.Key };
+                compDict.Add(comp.Key, c);
             }
+
 
             return compDict;
         }
